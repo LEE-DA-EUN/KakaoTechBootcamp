@@ -11,8 +11,18 @@ addBtn.addEventListener('click', function(){
         alert('내용을 입력해주세요');
     }
     else{
-        todo.innerText = addContent.value;
+        const checkBox = document.createElement('input');        
+        const todoSpan = document.createElement('span');        
+        const removeBtn = document.createElement('button');
+
+        checkBox.setAttribute('type','checkbox');
+        todoSpan.textContent = addContent.value;
+
+        todo.appendChild(checkBox);
+        todo.appendChild(todoSpan);
+        todo.appendChild(removeBtn);
         todoList.appendChild(todo);
         addContent.value = '';
+
     }
 })

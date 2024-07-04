@@ -24,5 +24,10 @@ addBtn.addEventListener('click', function(){
         todoList.appendChild(todo);
         addContent.value = '';
 
+        // 삭제 기능
+        removeBtn.addEventListener('click', function(){
+            todo.remove();
+        });
+
     }
 })
